@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8a51801b-0909-45be-a417-f195b6c56e12" name="18.220.227.85" url="http://18.220.227.85:9000">
+        <fileTransfer host="18.220.227.85" port="22" privateKey="C:\Users\Soledad\Documents\Grupo i4\OPC\Infraestructura\soledad.pem" rootFolder="/opt/opcapp" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
