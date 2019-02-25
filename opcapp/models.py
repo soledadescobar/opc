@@ -24,3 +24,27 @@ class Variablesmacroeconomicas(models.Model):
     class Meta:
         managed = True
         db_table = 'variablesmacroeconomicas'
+
+
+class Diashabiles(models.Model):
+    mes = models.DateField(primary_key=True)
+    diashabiles = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'diashabiles'
+
+
+class Serieipc(models.Model):
+    mes = models.IntegerField()
+    anio = models.IntegerField()
+    variacionmensual = models.FloatField(blank=True, null=True)
+    nivelgeneralipcnacional = models.FloatField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'serieipc'
+        unique_together = (('anio', 'mes'),)
+
+    def __str__(self):
+        return 'Mes: ' + str(self.anio) + '-' + str(self.mes)
